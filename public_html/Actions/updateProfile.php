@@ -11,7 +11,7 @@ $name = $post["name"];
 $password = $post["password"];
 $exam = $post["exam"];
 
-$sql = "update user set email = '".$username."' and name = '".$name."' and password = '".$password."' and exam='".$exam."' where id=".$user_id;
+$sql = "update user set email = '".$username."', name = '".$name."' , password = '".$password."' , exam='".$exam."' where id=".$user_id;
 
 $result = mysqli_query($conn , $sql);
 
@@ -20,3 +20,5 @@ if($result){
 }else{
     ResponseGenerator(0,$post["token"]," Failed to update your profile. Kindly try again later ");
 }
+
+
