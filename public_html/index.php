@@ -1,0 +1,1 @@
+<?phpinclude "include/conn.php";if(file_exists("Actions/".$post["action"].".php")){    include "Actions/".$post["action"].".php";}else{    if(!isset($post["action"])){ $post["action"] = "null";}    ResponseGenerator(false, $post["token"]," Unknown Action ".$post["action"], array());}
